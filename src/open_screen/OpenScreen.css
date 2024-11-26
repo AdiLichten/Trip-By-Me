@@ -1,0 +1,86 @@
+.open-main-screen {
+    font-family: "Abhaya Libre", Helvetica;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../img/backround.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    position: relative;
+}
+
+.open-screen-headlines {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    width: 100%;
+}
+
+.open-screen-trip-me {
+    font-size: calc(35px + 2vw);
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.open-screen-by {
+    font-size: calc(18px + 1vw);
+    padding: 0 10px;
+    font-weight: 400;
+}
+
+.open-screen-plan-your-next {
+    font-size: calc(20px + 1vw);
+    color: #fff;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+
+.open-screen-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-top: 150px;
+}
+
+.open-screen-button_lets {
+    background-color: #135eb9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 40px;
+    font-size: calc(18px + 1vw);
+    font-family: "ABeeZee", sans-serif;
+    font-style: italic;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-screen-button_lets:hover {
+    background-color: #0a4691;
+}
+
+
+@media (max-width: 768px) {
+    .open-screen-trip-me {
+        font-size: calc(28px + 1.5vw);
+    }
+
+    .open-screen-plan-your-next {
+        font-size: calc(16px + 1vw);
+    }
+
+    .open-screen-button_lets {
+        padding: 12px 30px;
+        font-size: calc(16px + 1vw);
+    }
+}

@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+.create-trip-screen {
+    font-family: "Abhaya Libre", Helvetica;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('../../img/backround.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    position: relative;
+    padding: 20px;
+}
+
+.create-trip-overlap-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90vw;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+
+.create-trip-input-for-fields {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.create-trip-input-for-fields select,
+.create-trip-input-for-fields input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cadeee;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #3a6686;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.button-add,
+.button-create-trip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #135eb9;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.create-trip-button-logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #135eb9;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.button-add {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.button-create-trip {
+    padding: 15px 25px;
+    font-size: calc(5px + 1vw);
+}
+
+.button-create-trip:hover,
+.button-add:hover,
+.create-trip-button-logout:hover {
+    background-color: #0d4d99;
+}
+
+.create-trip-button-logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.create-trip-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.selected-cities-list {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+}
+
+.selected-cities-list h4 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3a6686;
+    text-align: center;
+}
+
+.selected-cities-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.selected-cities-list li {
+    display: grid;
+    grid-template-columns: 1fr 80px 60px; /* Distribute space for city name, days, and remove button */
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #cadeee;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    font-size: 16px; /* Increased font size */
+}
+
+.selected-cities-list li:hover {
+    transform: scale(1.02); /* Slight scale effect on hover for better interactivity */
+}
+
+.selected-cities-list li:last-child {
+    margin-bottom: 0;
+}
+
+.selected-cities-list button {
+    background-color: #ff6961;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.selected-cities-list button:hover {
+    background-color: #e60000;
+}
+
+@media (max-width: 768px) {
+    .create-trip-overlap-group-wrapper {
+        padding: 20px;
+        width: 95vw;
+        max-width: none;
+        max-height: 85vh;
+    }
+
+    .button-create-trip {
+        font-size: calc(6px + 1vw);
+        padding: 15px;
+    }
+
+    .create-trip-title {
+        font-size: 24px;
+    }
+
+    .create-trip-button-logout {
+        padding: 8px 16px;
+        font-size: 14px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+    font-size: 1.5em;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

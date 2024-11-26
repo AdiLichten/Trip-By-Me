@@ -1,0 +1,115 @@
+.login-screen {
+    font-family: "Abhaya Libre", Helvetica;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../img/backround.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.login-screen-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+.login-screen-trip-by-me {
+    color: #ffffff;
+    font-size: calc(20px + 2vw);
+    font-weight: 600;
+    letter-spacing: 1vw;
+    margin-bottom: 0;
+}
+
+.login-screen-plan-your-next {
+    font-size: calc(10px + 1vw);
+    color: #ffffff;
+}
+
+.login-overlap-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    padding-top: 100px;
+}
+
+.login-overlap-group {
+    width: fit-content;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+}
+
+.login-button-login {
+    background-color: #135eb9;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: calc(15px + 0.5vw);
+    font-style: italic;
+    transition: background-color 0.3s ease;
+}
+
+.login-button-login:hover {
+    background-color: #0d4d99;
+}
+
+@media (max-width: 768px) {
+    .login-screen-trip-by-me {
+        font-size: calc(18px + 2vw);
+        letter-spacing: 0.8vw;
+    }
+
+    .login-screen-plan-your-next {
+        font-size: calc(8px + 1vw);
+    }
+
+    .login-overlap-group {
+        width: fit-content;
+        padding: 20px;
+    }
+
+    .login-button-login {
+        padding: 10px 15px;
+        font-size: calc(8px + 0.5vw);
+    }
+}
+
+@media (max-width: 480px) {
+    .login-screen-trip-by-me {
+        font-size: calc(16px + 2vw);
+        letter-spacing: 0.5vw;
+    }
+
+    .login-screen-plan-your-next {
+        font-size: calc(6px + 1vw);
+    }
+
+    .login-overlap-group {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .login-button-login {
+        padding: 8px 12px;
+        font-size: calc(7px + 0.5vw);
+    }
+}
